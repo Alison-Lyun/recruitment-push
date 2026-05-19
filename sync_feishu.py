@@ -21,6 +21,9 @@ def get_job_id(token):
     params = {"page_size": 100}
     r = requests.get(url, headers=headers, params=params)
     jobs = r.json().get("data", {}).get("items", [])
+        print("飞书返回的职位列表：")
+    for job in jobs:
+        print("-", job.get("title") or job.get("name") or job)
     for job in jobs:
         if JOB_NAME in job.get("title", ""):
             return job["id"]
