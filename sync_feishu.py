@@ -4,7 +4,7 @@ import requests
 
 APP_ID = os.environ["FEISHU_APP_ID"]
 APP_SECRET = os.environ["FEISHU_APP_SECRET"]
-JOB_NAME = "用户运营负责人"
+JOB_NAME = "用户服务运营负责人"
 
 # ── 1. 获取 tenant_access_token ──────────────────────────────
 def get_token():
