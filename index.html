@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>用户运营负责人 · 招聘追踪看板</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/dist/tabler-icons.min.css">
+<style>
+:root {
+  --bg: #ffffff;
+  --bg2: #f5f5f3;
+  --bg3: #eeede9;
+  --text: #1a1a1a;
+  --text2: #6b6b6b;
+  --text3: #999;
+  --border: rgba(0,0,0,0.1);
+  --border2: rgba(0,0,0,0.18);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1c1e;
+    --bg2: #2c2c2e;
+    --bg3: #3a3a3c;
+    --text: #f2f2f7;
+    --text2: #aeaeb2;
+    --text3: #636366;
+    --border: rgba(255,255,255,0.1);
+    --border2: rgba(255,255,255,0.18);
+    --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Helvetica Neue',sans-serif;background:var(--bg3);color:var(--text);min-height:100vh}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.75rem;flex-wrap:wrap;gap:12px}
+.header-left h1{font-size:20px;font-weight:600;color:var(--text)}
+.header-left p{font-size:13px;color:var(--text2);margin-top:3px}
+.tabs{display:flex;gap:2px;background:var(--bg2);border-radius:var(--radius);padding:3px;border:0.5px solid var(--border)}
+.tab{padding:7px 18px;font-size:13px;border-radius:6px;cursor:pointer;color:var(--text2);transition:all .15s;display:flex;align-items:center;gap:6px;border:none;background:transparent}
+.tab.active{background:var(--bg);color:var(--text);font-weight:500;box-shadow:var(--shadow)}
+.panel{display:none}
+.panel.active{display:block}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.5rem}
+@media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--bg);border-radius:var(--radius);padding:.85rem 1rem;border:0.5px solid var(--border);box-shadow:var(--shadow)}
+.stat-n{font-size:24px;font-weight:600;color:var(--text)}
+.stat-l{font-size:12px;color:var(--text2);margin-top:2px}
+.kanban-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:700px){.kanban-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.kanban-cols{grid-template-columns:1fr}}
+.col-head{font-size:12px;font-weight:600;padding:7px 11px;border-radius:var(--radius);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;letter-spacing:.3px}
+.col-count{border-radius:20px;padding:1px 8px;font-size:11px;font-weight:600}
+.k-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:11px 13px;margin-bottom:8px;cursor:pointer;transition:all .15s;box-shadow:var(--shadow)}
+.k-card:hover{border-color:var(--border2);transform:translateY(-1px)}
+.k-card-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px}
+.k-card-meta{font-size:11px;color:var(--text2);display:flex;align-items:center;justify-content:space-between}
+.k-add{background:transparent;border:0.5px dashed var(--border2);border-radius:var(--radius-lg);padding:8px;width:100%;color:var(--text3);font-size:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;transition:all .15s}
+.k-add:hover{background:var(--bg2);border-style:solid;color:var(--text2)}
+.fb-list{display:flex;flex-direction:column;gap:10px}
+.fb-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem 1.25rem;cursor:pointer;transition:all .15s;box-shadow:var(--shadow)}
+.fb-card:hover{border-color:var(--border2);transform:translateY(-1px)}
+.fb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.fb-name{font-size:14px;font-weight:500;color:var(--text)}
+.fb-round-badge{font-size:11px;padding:2px 8px;border-radius:20px;background:#E6F1FB;color:#185FA5;margin-left:8px}
+.fb-meta{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--text2);margin-bottom:10px}
+.stars{display:flex;gap:2px}
+.star{font-size:14px;color:var(--border2)}
+.star.on{color:#BA7517}
+.dims-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+@media(max-width:500px){.dims-row{grid-template-columns:repeat(2,1fr)}}
+.dim-pill{background:var(--bg2);border-radius:var(--radius);padding:7px 8px;text-align:center}
+.dim-pill-label{font-size:10px;color:var(--text3);margin-bottom:3px}
+.dim-pill-score{font-size:13px;font-weight:600}
+.fb-comment{font-size:12px;color:var(--text2);line-height:1.65;border-top:0.5px solid var(--border);padding-top:9px}
+.verdict-badge{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px}
+.add-btn-main{width:100%;padding:11px;font-size:13px;border-radius:var(--radius);background:transparent;border:0.5px dashed var(--border2);color:var(--text3);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:12px;transition:all .15s}
+.add-btn-main:hover{background:var(--bg2);border-style:solid;color:var(--text2)}
+.empty{text-align:center;padding:3rem;color:var(--text3);font-size:13px}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;z-index:200;padding:1rem}
+.modal-overlay.open{display:flex}
+.modal{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--radius-xl);padding:1.5rem;width:100%;max-width:500px;box-shadow:0 20px 60px rgba(0,0,0,.2);max-height:90vh;overflow-y:auto}
+.modal-title{font-size:16px;font-weight:600;margin-bottom:1.25rem;color:var(--text)}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:12px;color:var(--text2);margin-bottom:5px;font-weight:500}
+.field input,.field select,.field textarea{width:100%;padding:8px 10px;border:0.5px solid var(--border2);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:13px;font-family:inherit;outline:none;transition:border-color .15s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#378ADD}
+.field textarea{height:80px;resize:vertical}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dim-inputs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:13px}
+.dim-input-item label{font-size:11px;color:var(--text2);display:block;margin-bottom:3px;text-align:center}
+.dim-input-item input{text-align:center;padding:6px 4px}
+.modal-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:1.25rem;padding-top:1rem;border-top:0.5px solid var(--border)}
+.btn-cancel{background:transparent;border:0.5px solid var(--border2);border-radius:var(--radius);padding:8px 16px;font-size:13px;cursor:pointer;color:var(--text2);font-family:inherit}
+.btn-cancel:hover{background:var(--bg2)}
+.btn-save{background:var(--text);border:none;border-radius:var(--radius);padding:8px 16px;font-size:13px;cursor:pointer;color:var(--bg);font-weight:500;font-family:inherit}
+.btn-save:hover{opacity:.85}
+.btn-del{background:transparent;border:0.5px solid #E24B4A;border-radius:var(--radius);padding:8px 14px;font-size:13px;cursor:pointer;color:#A32D2D;margin-right:auto;font-family:inherit}
+.btn-del:hover{background:#FCEBEB}
+.search-wrap{position:relative}
+.search-wrap input{padding-left:32px;width:200px;border:0.5px solid var(--border2);border-radius:var(--radius);background:var(--bg);color:var(--text);font-size:13px;padding-top:7px;padding-bottom:7px;outline:none}
+.search-wrap input:focus{border-color:#378ADD}
+.search-wrap i{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:15px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);padding:10px 20px;border-radius:var(--radius);font-size:13px;z-index:300;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-left">
+      <h1>用户运营负责人 · 招聘追踪</h1>
+      <p>HC 状态实时追踪 · 面试反馈管理</p>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="search-wrap" id="searchWrap" style="display:none">
+        <i class="ti ti-search" aria-hidden="true"></i>
+        <input type="text" id="searchInput" placeholder="搜索候选人..." oninput="renderKanban()">
+      </div>
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('kanban')"><i class="ti ti-layout-kanban"></i> 候选人看板</button>
+        <button class="tab" onclick="switchTab('feedback')"><i class="ti ti-message-dots"></i> 面试反馈</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="panel-kanban" class="panel active"></div>
+  <div id="panel-feedback" class="panel"></div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-title" id="modalTitle">新增候选人</div>
+    <div id="modalBody"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const KCOLS=[
+  {id:'wishlist',label:'待筛选',color:'#E6F1FB',tc:'#185FA5',cb:'#B5D4F4'},
+  {id:'applied',label:'简历通过',color:'#FAEEDA',tc:'#854F0B',cb:'#FAC775'},
+  {id:'interview',label:'面试中',color:'#EAF3DE',tc:'#3B6D11',cb:'#C0DD97'},
+  {id:'offer',label:'Offer',color:'#E1F5EE',tc:'#0F6E56',cb:'#9FE1CB'},
+];
+
+function load(key,def){try{const v=localStorage.getItem(key);return v?JSON.parse(v):def;}catch{return def;}}
+function save(key,val){try{localStorage.setItem(key,JSON.stringify(val));}catch{}}
+
+let candidates=load('rk_candidates',[
+  {id:1,name:'李明',source:'猎头推荐',status:'interview',date:'2025-05-14',note:'5年用户运营，前美团'},
+  {id:2,name:'王芳',source:'Boss直聘',status:'applied',date:'2025-05-16',note:'背景匹配度高'},
+  {id:3,name:'陈浩',source:'内部推荐',status:'wishlist',date:'2025-05-17',note:'简历待查看'},
+]);
+let feedbacks=load('rk_feedbacks',[
+  {id:1,name:'李明',round:'一面',interviewer:'张总',date:'2025-05-15',stars:4,d1:8,d2:7,d3:9,d4:7,comment:'用户分层和生命周期管理有清晰方法论，曾主导 DAU 从50万到200万增长，沟通表达流畅，建议进入二面。',verdict:'推荐'},
+  {id:2,name:'李明',round:'二面',interviewer:'王总',date:'2025-05-17',stars:4,d1:8,d2:8,d3:8,d4:6,comment:'交叉面表现稳定，数据驱动意识强，管理经验相对薄弱，带过3人团队。整体推荐。',verdict:'推荐'},
+]);
+let nextCid=load('rk_nextCid',4);
+let nextFid=load('rk_nextFid',3);
+let curTab='kanban';
+let modalMode=null,editId=null,addStatus='wishlist';
+
+function saveCandidates(){save('rk_candidates',candidates);save('rk_nextCid',nextCid);}
+function saveFeedbacks(){save('rk_feedbacks',feedbacks);save('rk_nextFid',nextFid);}
+
+function fmt(d){if(!d)return'';const[y,m,day]=d.split('-');return`${m}/${day}`;}
+function today(){return new Date().toISOString().slice(0,10);}
+function starsHtml(n){return[1,2,3,4,5].map(i=>`<span class="star${i<=n?' on':''}">★</span>`).join('');}
+function verdictStyle(v){
+  const m={'强烈推荐':{bg:'#EAF3DE',c:'#3B6D11'},'推荐':{bg:'#E1F5EE',c:'#0F6E56'},'待定':{bg:'#FAEEDA',c:'#854F0B'},'不推荐':{bg:'#FCEBEB',c:'#A32D2D'}};
+  return m[v]||m['待定'];
+}
+function dimColor(s){return s>=8?'#3B6D11':s>=6?'#BA7517':'#A32D2D';}
+
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),2200);
+}
+
+function switchTab(t){
+  curTab=t;
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active',['kanban','feedback'][i]===t));
+  document.querySelectorAll('.panel').forEach(el=>el.classList.remove('active'));
+  document.getElementById('panel-'+t).classList.add('active');
+  document.getElementById('searchWrap').style.display=t==='kanban'?'block':'none';
+  t==='kanban'?renderKanban():renderFeedback();
+}
+
+function renderKanban(){
+  const q=(document.getElementById('searchInput').value||'').toLowerCase();
+  const el=document.getElementById('panel-kanban');
+  const fbCount=name=>feedbacks.filter(f=>f.name===name).length;
+  el.innerHTML=`<div class="kanban-cols">${KCOLS.map(col=>{
+    const cc=candidates.filter(c=>c.status===col.id&&(!q||(c.name+c.source).toLowerCase().includes(q)));
+    return`<div>
+      <div class="col-head" style="background:${col.color};color:${col.tc}">
+        ${col.label}
+        <span class="col-count" style="background:${col.cb};color:${col.tc}">${cc.length}</span>
+      </div>
+      ${cc.map(c=>`<div class="k-card" onclick="openEditCandidate(${c.id})">
+        <div class="k-card-name">${c.name}</div>
+        <div class="k-card-meta">
+          <span>${c.source||'—'}</span>
+          ${fbCount(c.name)?`<span style="color:#185FA5"><i class="ti ti-message-dots" style="font-size:11px"></i> ${fbCount(c.name)}轮面试</span>`:''}
+        </div>
+      </div>`).join('')}
+      <button class="k-add" onclick="openAddCandidate('${col.id}')"><i class="ti ti-plus"></i> 添加</button>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+function renderFeedback(){
+  const el=document.getElementById('panel-feedback');
+  const total=feedbacks.length;
+  const avgStar=total?(feedbacks.reduce((a,f)=>a+f.stars,0)/total).toFixed(1):0;
+  const rec=feedbacks.filter(f=>f.verdict==='推荐'||f.verdict==='强烈推荐').length;
+  const names=[...new Set(feedbacks.map(f=>f.name))].length;
+  el.innerHTML=`
+    <div class="stats">
+      <div class="stat"><div class="stat-n">${total}</div><div class="stat-l">面试记录</div></div>
+      <div class="stat"><div class="stat-n">${names}</div><div class="stat-l">候选人数</div></div>
+      <div class="stat"><div class="stat-n">${avgStar}</div><div class="stat-l">平均评分</div></div>
+      <div class="stat"><div class="stat-n">${rec}</div><div class="stat-l">推荐通过</div></div>
+    </div>
+    <div class="fb-list">
+      ${feedbacks.length?feedbacks.map(f=>{
+        const vs=verdictStyle(f.verdict);
+        return`<div class="fb-card" onclick="openEditFb(${f.id})">
+          <div class="fb-top">
+            <div><span class="fb-name">${f.name}</span><span class="fb-round-badge">${f.round}</span></div>
+            <span class="verdict-badge" style="background:${vs.bg};color:${vs.c}">${f.verdict}</span>
+          </div>
+          <div class="fb-meta">
+            <span><i class="ti ti-user" style="font-size:12px"></i> ${f.interviewer||'—'}</span>
+            <span><i class="ti ti-calendar" style="font-size:12px"></i> ${fmt(f.date)}</span>
+            <div class="stars">${starsHtml(f.stars)}</div>
+          </div>
+          <div class="dims-row">
+            ${[['运营能力',f.d1],['数据思维',f.d2],['沟通表达',f.d3],['管理经验',f.d4]].map(([l,s])=>`
+              <div class="dim-pill"><div class="dim-pill-label">${l}</div><div class="dim-pill-score" style="color:${dimColor(s)}">${s}/10</div></div>`).join('')}
+          </div>
+          <div class="fb-comment">${f.comment}</div>
+        </div>`;
+      }).join(''):`<div class="empty"><i class="ti ti-message-off" style="font-size:28px;display:block;margin-bottom:10px"></i>暂无面试反馈，点击下方按钮添加</div>`}
+    </div>
+    <button class="add-btn-main" onclick="openAddFb()"><i class="ti ti-plus"></i> 添加面试反馈</button>`;
+}
+
+function candidateForm(c){
+  return`
+    <div class="two-col">
+      <div class="field"><label>候选人姓名</label><input id="fName" type="text" value="${c?.name||''}" placeholder="张三"></div>
+      <div class="field"><label>来源渠道</label><input id="fSource" type="text" value="${c?.source||''}" placeholder="猎头推荐"></div>
+    </div>
+    <div class="two-col">
+      <div class="field"><label>当前阶段</label>
+        <select id="fStatus">${KCOLS.map(col=>`<option value="${col.id}"${(c?.status||addStatus)===col.id?' selected':''}>${col.label}</option>`).join('')}</select>
+      </div>
+      <div class="field"><label>投递日期</label><input id="fDate" type="date" value="${c?.date||today()}"></div>
+    </div>
+    <div class="field"><label>备注</label><textarea id="fNote" placeholder="薪资期望、面试安排...">${c?.note||''}</textarea></div>`;
+}
+
+function feedbackForm(f){
+  return`
+    <div class="two-col">
+      <div class="field"><label>候选人姓名</label>
+        <select id="fName">${[...new Set(candidates.map(c=>c.name))].map(n=>`<option${f?.name===n?' selected':''}>${n}</option>`).join('')}${f&&!candidates.find(c=>c.name===f.name)?`<option selected>${f.name}</option>`:''}</select>
+      </div>
+      <div class="field"><label>面试轮次</label>
+        <select id="fRound">${['HR初筛','一面','二面','终面'].map(r=>`<option${f?.round===r?' selected':''}>${r}</option>`).join('')}</select>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="field"><label>面试官</label><input id="fInterviewer" type="text" value="${f?.interviewer||''}" placeholder="王总"></div>
+      <div class="field"><label>面试日期</label><input id="fDate" type="date" value="${f?.date||today()}"></div>
+    </div>
+    <div class="field"><label>综合评分</label>
+      <select id="fStar">${[5,4,3,2,1].map(s=>`<option value="${s}"${f?.stars===s?' selected':''}>${'★'.repeat(s)} ${['','不通过','较差','一般','优秀','非常优秀'][s]}</option>`).join('')}</select>
+    </div>
+    <div class="field"><label>各维度评分（1-10）</label></div>
+    <div class="dim-inputs">
+      ${[['d1','运营能力',f?.d1||7],['d2','数据思维',f?.d2||7],['d3','沟通表达',f?.d3||7],['d4','管理经验',f?.d4||7]].map(([id,l,v])=>`
+        <div class="dim-input-item"><label>${l}</label><input id="${id}" type="number" min="1" max="10" value="${v}"></div>`).join('')}
+    </div>
+    <div class="field"><label>面试评价</label><textarea id="fComment" placeholder="候选人表现、亮点、不足...">${f?.comment||''}</textarea></div>
+    <div class="field"><label>结论</label>
+      <select id="fVerdict">${['强烈推荐','推荐','待定','不推荐'].map(v=>`<option${f?.verdict===v?' selected':''}>${v}</option>`).join('')}</select>
+    </div>`;
+}
+
+function openAddCandidate(status){
+  addStatus=status;modalMode='addCandidate';editId=null;
+  document.getElementById('modalTitle').textContent='新增候选人';
+  document.getElementById('modalBody').innerHTML=candidateForm(null);
+  document.getElementById('modalActions').innerHTML=`<button class="btn-cancel" onclick="closeModal()">取消</button><button class="btn-save" onclick="saveCandidate()">保存</button>`;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function openEditCandidate(id){
+  const c=candidates.find(x=>x.id===id);if(!c)return;
+  editId=id;modalMode='editCandidate';
+  document.getElementById('modalTitle').textContent='编辑候选人';
+  document.getElementById('modalBody').innerHTML=candidateForm(c);
+  document.getElementById('modalActions').innerHTML=`<button class="btn-del" onclick="deleteCandidate()"><i class="ti ti-trash"></i> 删除</button><button class="btn-cancel" onclick="closeModal()">取消</button><button class="btn-save" onclick="saveCandidate()">保存</button>`;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveCandidate(){
+  const name=document.getElementById('fName').value.trim();
+  if(!name){alert('请填写候选人姓名');return;}
+  const obj={name,source:document.getElementById('fSource').value.trim(),status:document.getElementById('fStatus').value,date:document.getElementById('fDate').value,note:document.getElementById('fNote').value.trim()};
+  if(modalMode==='editCandidate'){const i=candidates.findIndex(c=>c.id===editId);candidates[i]={...candidates[i],...obj};}
+  else{candidates.push({id:nextCid++,...obj});}
+  saveCandidates();closeModal();renderKanban();showToast('已保存');
+}
+
+function deleteCandidate(){
+  candidates=candidates.filter(c=>c.id!==editId);
+  saveCandidates();closeModal();renderKanban();showToast('已删除');
+}
+
+function openAddFb(){
+  modalMode='addFb';editId=null;
+  document.getElementById('modalTitle').textContent='新增面试反馈';
+  document.getElementById('modalBody').innerHTML=feedbackForm(null);
+  document.getElementById('modalActions').innerHTML=`<button class="btn-cancel" onclick="closeModal()">取消</button><button class="btn-save" onclick="saveFb()">保存</button>`;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function openEditFb(id){
+  const f=feedbacks.find(x=>x.id===id);if(!f)return;
+  editId=id;modalMode='editFb';
+  document.getElementById('modalTitle').textContent='编辑面试反馈';
+  document.getElementById('modalBody').innerHTML=feedbackForm(f);
+  document.getElementById('modalActions').innerHTML=`<button class="btn-del" onclick="deleteFb()"><i class="ti ti-trash"></i> 删除</button><button class="btn-cancel" onclick="closeModal()">取消</button><button class="btn-save" onclick="saveFb()">保存</button>`;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function saveFb(){
+  const nameEl=document.getElementById('fName');
+  const name=nameEl.tagName==='SELECT'?nameEl.value:nameEl.value.trim();
+  if(!name){alert('请填写候选人姓名');return;}
+  const obj={name,round:document.getElementById('fRound').value,interviewer:document.getElementById('fInterviewer').value.trim(),date:document.getElementById('fDate').value,stars:parseInt(document.getElementById('fStar').value),d1:parseInt(document.getElementById('d1').value)||7,d2:parseInt(document.getElementById('d2').value)||7,d3:parseInt(document.getElementById('d3').value)||7,d4:parseInt(document.getElementById('d4').value)||7,comment:document.getElementById('fComment').value.trim(),verdict:document.getElementById('fVerdict').value};
+  if(modalMode==='editFb'){const i=feedbacks.findIndex(f=>f.id===editId);feedbacks[i]={...feedbacks[i],...obj};}
+  else{feedbacks.push({id:nextFid++,...obj});}
+  saveFeedbacks();closeModal();renderFeedback();showToast('已保存');
+}
+
+function deleteFb(){
+  feedbacks=feedbacks.filter(f=>f.id!==editId);
+  saveFeedbacks();closeModal();renderFeedback();showToast('已删除');
+}
+
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open');}
+document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+
+renderKanban();
+</script>
+</body>
+</html>
