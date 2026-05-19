@@ -25,7 +25,7 @@ def get_job_id(token):
     for job in jobs:
         print("-", job.get("title") or job.get("name") or job)
     for job in jobs:
-        if JOB_NAME in job.get("title", ""):
+        if JOB_NAME in (job.get("title") or job.get("name") or ""):
             return job["id"]
     return None
 
