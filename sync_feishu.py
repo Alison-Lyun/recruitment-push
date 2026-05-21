@@ -1,6 +1,7 @@
 import os
 import json
 import requests
+from datetime import datetime, timezone
 
 APP_ID = os.environ["FEISHU_APP_ID"]
 APP_SECRET = os.environ["FEISHU_APP_SECRET"]
@@ -38,23 +39,41 @@ def get_job_id(token):
 def get_applications(token, job_id):
     headers = {"Authorization": f"Bearer {token}"}
     url = "https://open.feishu.cn/open-apis/hire/v1/applications"
-    params = {"page_size": 100, "job_id": job_id}
-    r = requests.get(url, headers=headers, params=params)
-    return r.json().get("data", {}).get("items", [])
+    items = []
+    page_token = ""
+    while True:
+        params = {"page_size": 100, "job_id": job_id, "active_status": 3}
+        if page_token:
+            params["page_token"] = page_token
+        r = requests.get(url, headers=headers, params=params)
+        data = r.json().get("data", {})
+        if not isinstance(data, dict):
+            return items
+        items.extend(data.get("items", []))
+        page_token = data.get("page_token", "")
+        if not data.get("has_more") or not page_token:
+            return items
 
 def get_application(token, application_id):
     headers = {"Authorization": f"Bearer {token}"}
     url = f"https://open.feishu.cn/open-apis/hire/v1/applications/{application_id}"
     r = requests.get(url, headers=headers)
     data = r.json().get("data", {})
-    return data.get("application") or data
+    if not isinstance(data, dict):
+        return {}
+    application = data.get("application")
+    return application if isinstance(application, dict) else data
 
 # ── 4. 获取候选人详情（姓名）────────────────────────────────
 def get_talent(token, talent_id):
     headers = {"Authorization": f"Bearer {token}"}
     url = f"https://open.feishu.cn/open-apis/hire/v1/talents/{talent_id}"
     r = requests.get(url, headers=headers)
-    return r.json().get("data", {}).get("talent", {})
+    data = r.json().get("data", {})
+    if not isinstance(data, dict):
+        return {}
+    talent = data.get("talent")
+    return talent if isinstance(talent, dict) else data
 
 # ── 5. 将飞书投递阶段映射到看板状态 ─────────────────────────
 STAGE_MAP = {
@@ -73,6 +92,25 @@ def map_status(stage_name: str) -> str:
         if key.lower() in stage_name.lower():
             return val
     return "wishlist"
+
+def pick_name_from_talent(talent, fallback):
+    if not isinstance(talent, dict):
+        return fallback
+    basic_info = talent.get("basic_info") or {}
+    if isinstance(basic_info, dict) and basic_info.get("name"):
+        return basic_info["name"]
+    return talent.get("name") or fallback
+
+def normalize_date(value):
+    if value in (None, ""):
+        return ""
+    text = str(value)
+    if text.isdigit():
+        ts = int(text)
+        if ts > 10_000_000_000:
+            ts = ts / 1000
+        return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d")
+    return text[:10]
 
 # ── 主流程 ───────────────────────────────────────────────────
 def main():
@@ -101,7 +139,10 @@ def main():
                 app = app_item
                 app_id = app.get("id", "")
 
+            talent_info = app.get("talent")
             talent_id = app.get("talent_id", "")
+            if not talent_id and isinstance(talent_info, dict):
+                talent_id = talent_info.get("id", "")
             stage_info = app.get("stage") or app.get("active_stage") or {}
             if isinstance(stage_info, dict):
                 stage = stage_info.get("name", "投递")
@@ -109,17 +150,15 @@ def main():
                 stage = stage_info
             else:
                 stage = "投递"
-            create_time = str(app.get("create_time") or app.get("created_time") or "")
-            date = create_time[:10] if create_time else ""
+            create_time = app.get("create_time") or app.get("created_time") or app.get("delivery_time") or ""
+            date = normalize_date(create_time)
 
             # 获取姓名
             name = f"候选人{i+1}"
-            talent_info = app.get("talent")
-            if isinstance(talent_info, dict):
-                name = talent_info.get("name", name)
+            name = pick_name_from_talent(talent_info, name)
             if talent_id:
                 talent = get_talent(token, talent_id)
-                name = talent.get("name", name)
+                name = pick_name_from_talent(talent, name)
 
             candidates.append({
                 "id": i + 1,
