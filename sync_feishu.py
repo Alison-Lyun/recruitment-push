@@ -5,6 +5,7 @@ import requests
 APP_ID = os.environ["FEISHU_APP_ID"]
 APP_SECRET = os.environ["FEISHU_APP_SECRET"]
 JOB_NAME = "用户服务运营负责人"
+JOB_ID = "7639671785348614438"
 
 # ── 1. 获取 tenant_access_token ──────────────────────────────
 def get_token():
@@ -16,6 +17,9 @@ def get_token():
 
 # ── 2. 获取所有职位，找到目标职位 ID ─────────────────────────
 def get_job_id(token):
+    if JOB_ID:
+        print(f"使用固定职位 ID: {JOB_ID}")
+        return JOB_ID
     headers = {"Authorization": f"Bearer {token}"}
     url = "https://open.feishu.cn/open-apis/hire/v1/jobs"
     params = {"page_size": 100}
