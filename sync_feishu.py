@@ -41,12 +41,12 @@ def get_applications(token, job_id):
     r = requests.get(url, headers=headers, params=params)
     return r.json().get("data", {}).get("items", [])
     
-    def get_application(token, application_id):
-        headers = {"Authorization": f"Bearer {token}"}
-        url = f"https://open.feishu.cn/open-apis/hire/v1/applications/{application_id}"
-        r = requests.get(url, headers=headers)
-        data = r.json().get("data", {})
-        return data.get("application") or data
+def get_application(token, application_id):
+    headers = {"Authorization": f"Bearer {token}"}
+    url = f"https://open.feishu.cn/open-apis/hire/v1/applications/{application_id}"
+    r = requests.get(url, headers=headers)
+    data = r.json().get("data", {})
+    return data.get("application") or data
     
 # ── 4. 获取候选人详情（姓名）────────────────────────────────
 def get_talent(token, talent_id):
