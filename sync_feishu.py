@@ -40,7 +40,14 @@ def get_applications(token, job_id):
     params = {"page_size": 100, "job_id": job_id}
     r = requests.get(url, headers=headers, params=params)
     return r.json().get("data", {}).get("items", [])
-
+    
+    def get_application(token, application_id):
+        headers = {"Authorization": f"Bearer {token}"}
+        url = f"https://open.feishu.cn/open-apis/hire/v1/applications/{application_id}"
+        r = requests.get(url, headers=headers)
+        data = r.json().get("data", {})
+        return data.get("application") or data
+    
 # ── 4. 获取候选人详情（姓名）────────────────────────────────
 def get_talent(token, talent_id):
     headers = {"Authorization": f"Bearer {token}"}
@@ -83,7 +90,15 @@ def main():
         print(f"   共 {len(apps)} 位候选人")
 
         candidates = []
-        for i, app in enumerate(apps):
+        for i, app_item in enumerate(apps):
+            if isinstance(app_item, str):
+                app_id = app_item
+                app = get_application(token, app_id)
+                if not isinstance(app, dict):
+                    app = {}
+            else:
+                app = app_item
+                app_id = app.get("id", "")
             talent_id = app.get("talent_id", "")
             stage = app.get("stage", {}).get("name", "投递")
             create_time = app.get("create_time", "")
