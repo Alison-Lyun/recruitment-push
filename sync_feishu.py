@@ -20,6 +20,7 @@ def get_job_id(token):
     if JOB_ID:
         print(f"使用固定职位 ID: {JOB_ID}")
         return JOB_ID
+
     headers = {"Authorization": f"Bearer {token}"}
     url = "https://open.feishu.cn/open-apis/hire/v1/jobs"
     params = {"page_size": 100}
@@ -40,14 +41,14 @@ def get_applications(token, job_id):
     params = {"page_size": 100, "job_id": job_id}
     r = requests.get(url, headers=headers, params=params)
     return r.json().get("data", {}).get("items", [])
-    
+
 def get_application(token, application_id):
     headers = {"Authorization": f"Bearer {token}"}
     url = f"https://open.feishu.cn/open-apis/hire/v1/applications/{application_id}"
     r = requests.get(url, headers=headers)
     data = r.json().get("data", {})
     return data.get("application") or data
-    
+
 # ── 4. 获取候选人详情（姓名）────────────────────────────────
 def get_talent(token, talent_id):
     headers = {"Authorization": f"Bearer {token}"}
@@ -99,13 +100,23 @@ def main():
             else:
                 app = app_item
                 app_id = app.get("id", "")
+
             talent_id = app.get("talent_id", "")
-            stage = app.get("stage", {}).get("name", "投递")
-            create_time = app.get("create_time", "")
+            stage_info = app.get("stage") or app.get("active_stage") or {}
+            if isinstance(stage_info, dict):
+                stage = stage_info.get("name", "投递")
+            elif isinstance(stage_info, str):
+                stage = stage_info
+            else:
+                stage = "投递"
+            create_time = str(app.get("create_time") or app.get("created_time") or "")
             date = create_time[:10] if create_time else ""
 
             # 获取姓名
             name = f"候选人{i+1}"
+            talent_info = app.get("talent")
+            if isinstance(talent_info, dict):
+                name = talent_info.get("name", name)
             if talent_id:
                 talent = get_talent(token, talent_id)
                 name = talent.get("name", name)
@@ -113,11 +124,11 @@ def main():
             candidates.append({
                 "id": i + 1,
                 "name": name,
-                "source": app.get("resume_source", {}).get("name", "飞书招聘"),
+                "source": (app.get("resume_source") or {}).get("name", "飞书招聘") if isinstance(app.get("resume_source"), dict) else "飞书招聘",
                 "status": map_status(stage),
                 "date": date,
                 "note": f"当前阶段：{stage}",
-                "feishu_app_id": app.get("id", ""),
+                "feishu_app_id": app_id,
             })
 
     # ── 写入 data.json ────────────────────────────────────────
