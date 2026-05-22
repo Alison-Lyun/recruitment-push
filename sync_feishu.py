@@ -98,3 +98,130 @@ STAGE_FIELD_NAMES = (
 def pick_name(value):
     if isinstance(value, dict):
         for key in ("name", "zh_name", "title", "stage_name"):
+            if value.get(key):
+                return str(value[key])
+    elif isinstance(value, str):
+        return value
+    return ""
+
+def find_stage_name(value):
+    if isinstance(value, dict):
+        direct = pick_name(value)
+        if direct:
+            return direct
+        for key in STAGE_FIELD_NAMES:
+            if key in value:
+                found = find_stage_name(value[key])
+                if found:
+                    return found
+        for key, child in value.items():
+            if "stage" in key or "process" in key:
+                found = find_stage_name(child)
+                if found:
+                    return found
+    elif isinstance(value, list):
+        for item in value:
+            found = find_stage_name(item)
+            if found:
+                return found
+    return ""
+
+def get_stage_name(app):
+    for key in STAGE_FIELD_NAMES:
+        stage = find_stage_name(app.get(key))
+        if stage:
+            return stage
+    return "投递"
+
+def map_status(stage_name: str) -> str:
+    text = (stage_name or "").lower()
+    if "offer" in text or "录用" in text or "待入职" in text:
+        return "offer"
+    if "面" in text or "邀约" in text or "沟通" in text:
+        return "interview"
+    if "评估" in text or "筛" in text or "笔试" in text:
+        return "applied"
+    return "wishlist"
+
+def pick_name_from_talent(talent, fallback):
+    if not isinstance(talent, dict):
+        return fallback
+    basic_info = talent.get("basic_info") or {}
+    if isinstance(basic_info, dict) and basic_info.get("name"):
+        return basic_info["name"]
+    return talent.get("name") or fallback
+
+def normalize_date(value):
+    if value in (None, ""):
+        return ""
+    text = str(value)
+    if text.isdigit():
+        ts = int(text)
+        if ts > 10_000_000_000:
+            ts = ts / 1000
+        return datetime.fromtimestamp(ts, tz=timezone.utc).strftime("%Y-%m-%d")
+    return text[:10]
+
+# ── 主流程 ───────────────────────────────────────────────────
+def main():
+    print("🔑 获取飞书 token...")
+    token = get_token()
+
+    print(f"🔍 查找职位「{JOB_NAME}」...")
+    job_id = get_job_id(token)
+    if not job_id:
+        print(f"⚠️  未找到职位「{JOB_NAME}」，使用空数据")
+        candidates = []
+    else:
+        print(f"✅ 找到职位 ID: {job_id}")
+        print("📋 获取候选人列表...")
+        apps = get_applications(token, job_id)
+        print(f"   共 {len(apps)} 位候选人")
+
+        candidates = []
+        for i, app_item in enumerate(apps):
+            if isinstance(app_item, str):
+                app_id = app_item
+                app = get_application(token, app_id)
+            else:
+                app = app_item
+                app_id = app.get("id", "")
+                if app_id:
+                    app = merge_application(app, get_application(token, app_id))
+            if not isinstance(app, dict):
+                app = {}
+
+            talent_info = app.get("talent")
+            talent_id = app.get("talent_id", "")
+            if not talent_id and isinstance(talent_info, dict):
+                talent_id = talent_info.get("id", "")
+            stage = get_stage_name(app)
+            create_time = app.get("create_time") or app.get("created_time") or app.get("delivery_time") or ""
+            date = normalize_date(create_time)
+
+            # 获取姓名
+            name = f"候选人{i+1}"
+            name = pick_name_from_talent(talent_info, name)
+            if talent_id:
+                talent = get_talent(token, talent_id)
+                name = pick_name_from_talent(talent, name)
+
+            candidates.append({
+                "id": i + 1,
+                "name": name,
+                "source": (app.get("resume_source") or {}).get("name", "飞书招聘") if isinstance(app.get("resume_source"), dict) else "飞书招聘",
+                "status": map_status(stage),
+                "stage": stage,
+                "date": date,
+                "note": f"当前阶段：{stage}",
+                "feishu_app_id": app_id,
+            })
+
+    # ── 写入 data.json ────────────────────────────────────────
+    output = {"candidates": candidates, "job": JOB_NAME}
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+    print(f"✅ data.json 已写入，共 {len(candidates)} 条候选人记录")
+
+if __name__ == "__main__":
+    main()
