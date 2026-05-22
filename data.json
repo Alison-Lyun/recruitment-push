@@ -2,1208 +2,1432 @@
   "candidates": [
     {
       "id": 1,
-      "name": "李林桥",
+      "name": "马国虎",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340626579130665"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642642324615252287"
     },
     {
       "id": 2,
-      "name": "李亦璇",
+      "name": "李天阳",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340626579114281"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642642343023429942"
     },
     {
       "id": 3,
-      "name": "许敏",
+      "name": "黄毅",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340626579081513"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642642334311614774"
     },
     {
       "id": 4,
-      "name": "贾英琪",
+      "name": "贺婷婷",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340626579687721"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7642589035299539219"
     },
     {
       "id": 5,
-      "name": "陈飏",
+      "name": "宋鹏宇",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340626579097897"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642588173965281546"
     },
     {
       "id": 6,
-      "name": "党婉婷",
+      "name": "杨创",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340278045608235"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642560690435311935"
     },
     {
       "id": 7,
-      "name": "邓惠文",
+      "name": "徐彭成悦",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340278045591851"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642560622693288235"
     },
     {
       "id": 8,
-      "name": "姜镔秦",
+      "name": "林洁兵",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340278045559083"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642560622692944171"
     },
     {
       "id": 9,
-      "name": "李铭昌",
+      "name": "吴东阳",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340278045542699"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-22",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642560580377446719"
     },
     {
       "id": 10,
-      "name": "彭宇红",
+      "name": "李林桥",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642340278045575467"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340626579130665"
     },
     {
       "id": 11,
-      "name": "柴琦琦",
+      "name": "李亦璇",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-21",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7642336470845901075"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340626579114281"
     },
     {
       "id": 12,
-      "name": "林俊鹏",
+      "name": "许敏",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-20",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641904067347155243"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7642340626579081513"
     },
     {
       "id": 13,
-      "name": "刘华英",
+      "name": "贾英琪",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-20",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641883358590421291"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340626579687721"
     },
     {
       "id": 14,
-      "name": "许珑灵",
+      "name": "陈飏",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641557795368388914"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340626579097897"
     },
     {
       "id": 15,
-      "name": "易家琪",
+      "name": "党婉婷",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641557890583021850"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340278045608235"
     },
     {
       "id": 16,
-      "name": "伊春雨",
+      "name": "邓惠文",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641557860886890761"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340278045591851"
     },
     {
       "id": 17,
-      "name": "梁静丽",
+      "name": "姜镔秦",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641557830776047922"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340278045559083"
     },
     {
       "id": 18,
-      "name": "施泽帆",
+      "name": "李铭昌",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641537693735045412"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7642340278045542699"
     },
     {
       "id": 19,
-      "name": "张晓妙",
+      "name": "彭宇红",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641536916362692902"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642340278045575467"
     },
     {
       "id": 20,
-      "name": "李嘉泽",
+      "name": "柴琦琦",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641536950092073242"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-21",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7642336470845901075"
     },
     {
       "id": 21,
-      "name": "王诗雨",
+      "name": "林俊鹏",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641534815451400494"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-20",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641904067347155243"
     },
     {
       "id": 22,
-      "name": "雷zx",
+      "name": "刘华英",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641534849857702171"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-20",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641883358590421291"
     },
     {
       "id": 23,
-      "name": "李祥远",
+      "name": "许珑灵",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "专业一面",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641510075735050505"
+      "note": "当前阶段：专业一面",
+      "feishu_app_id": "7641557795368388914"
     },
     {
       "id": 24,
-      "name": "虞翌欢",
+      "name": "易家琪",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641510051594127662"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641557890583021850"
     },
     {
       "id": 25,
-      "name": "林诗田",
+      "name": "伊春雨",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641509062128208178"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641557860886890761"
     },
     {
       "id": 26,
-      "name": "余小芳",
+      "name": "梁静丽",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641509100903663922"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641557830776047922"
     },
     {
       "id": 27,
-      "name": "Winky",
+      "name": "施泽帆",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641509125670668582"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641537693735045412"
     },
     {
       "id": 28,
-      "name": "李鑫",
+      "name": "张晓妙",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641509104854354227"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641536916362692902"
     },
     {
       "id": 29,
-      "name": "杨媛",
+      "name": "李嘉泽",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641509109816183078"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641536950092073242"
     },
     {
       "id": 30,
-      "name": "雷国浩",
+      "name": "王诗雨",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641509090531920138"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641534815451400494"
     },
     {
       "id": 31,
-      "name": "王梓萱",
+      "name": "雷zx",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641508319664621850"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641534849857702171"
     },
     {
       "id": 32,
-      "name": "王俊杰",
+      "name": "李祥远",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641508269765724426"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641510075735050505"
     },
     {
       "id": 33,
-      "name": "杨潜浪",
+      "name": "虞翌欢",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641504808171702564"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641510051594127662"
     },
     {
       "id": 34,
-      "name": "戴乐怡",
+      "name": "林诗田",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641504793135876393"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641509062128208178"
     },
     {
       "id": 35,
-      "name": "韩先生",
+      "name": "余小芳",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-19",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641452499152980278"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641509100903663922"
     },
     {
       "id": 36,
-      "name": "余雪儿",
+      "name": "Winky",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641375526971820329"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641509125670668582"
     },
     {
       "id": 37,
-      "name": "盘吉玲",
+      "name": "李鑫",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641226185620703529"
+      "status": "interview",
+      "stage": "初面邀约",
+      "date": "2026-05-19",
+      "note": "当前阶段：初面邀约",
+      "feishu_app_id": "7641509104854354227"
     },
     {
       "id": 38,
-      "name": "童子齐",
+      "name": "杨媛",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641224524793940270"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641509109816183078"
     },
     {
       "id": 39,
-      "name": "廖婷婷",
+      "name": "雷国浩",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641224738165033242"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641509090531920138"
     },
     {
       "id": 40,
-      "name": "鲁轩辰",
+      "name": "王梓萱",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641224606532536627"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641508319664621850"
     },
     {
       "id": 41,
-      "name": "刘敏",
+      "name": "王俊杰",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641224680510310707"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641508269765724426"
     },
     {
       "id": 42,
-      "name": "黄奇",
+      "name": "杨潜浪",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641224733346253094"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641504808171702564"
     },
     {
       "id": 43,
-      "name": "赵绮蓥",
+      "name": "戴乐怡",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641224733346122022"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641504793135876393"
     },
     {
       "id": 44,
-      "name": "吴杨应东",
+      "name": "韩先生",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641223860558514458"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-19",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641452499152980278"
     },
     {
       "id": 45,
-      "name": "许强",
+      "name": "余雪儿",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641223931764705574"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641375526971820329"
     },
     {
       "id": 46,
-      "name": "柴智佳",
+      "name": "盘吉玲",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641223954056988966"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641226185620703529"
     },
     {
       "id": 47,
-      "name": "沈凯笛",
+      "name": "童子齐",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "专业一面",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641223987947063598"
+      "note": "当前阶段：专业一面",
+      "feishu_app_id": "7641224524793940270"
     },
     {
       "id": 48,
-      "name": "白浩正",
+      "name": "廖婷婷",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641223000373168430"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641224738165033242"
     },
     {
       "id": 49,
-      "name": "邝世杭",
+      "name": "鲁轩辰",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641201644106385714"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641224606532536627"
     },
     {
       "id": 50,
-      "name": "陈仲义",
+      "name": "刘敏",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "专业一面",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641199485007431990"
+      "note": "当前阶段：专业一面",
+      "feishu_app_id": "7641224680510310707"
     },
     {
       "id": 51,
-      "name": "金沈祎",
+      "name": "黄奇",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641199454871767338"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641224733346253094"
     },
     {
       "id": 52,
-      "name": "肖淇",
+      "name": "赵绮蓥",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641199417869322502"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641224733346122022"
     },
     {
       "id": 53,
-      "name": "徐泉",
+      "name": "吴杨应东",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641198576593193235"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641223860558514458"
     },
     {
       "id": 54,
-      "name": "章颖芳",
+      "name": "许强",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641198593555384630"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641223931764705574"
     },
     {
       "id": 55,
-      "name": "张梓潞",
+      "name": "柴智佳",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641189836128962843"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641223954056988966"
     },
     {
       "id": 56,
-      "name": "张攀",
+      "name": "沈凯笛",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641148216163748106"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641223987947063598"
     },
     {
       "id": 57,
-      "name": "李馨炜",
+      "name": "白浩正",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641140423444662554"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641223000373168430"
     },
     {
       "id": 58,
-      "name": "张晗",
+      "name": "邝世杭",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641135364753901851"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641201644106385714"
     },
     {
       "id": 59,
-      "name": "李秀莉",
+      "name": "陈仲义",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641133527300344100"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641199485007431990"
     },
     {
       "id": 60,
-      "name": "徐泉",
+      "name": "金沈祎",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "初面邀约",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641117439585061161"
+      "note": "当前阶段：初面邀约",
+      "feishu_app_id": "7641199454871767338"
     },
     {
       "id": 61,
-      "name": "刘辰星",
+      "name": "肖淇",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641073939674941738"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641199417869322502"
     },
     {
       "id": 62,
-      "name": "邓新艺",
+      "name": "徐泉",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641073965528631588"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641198576593193235"
     },
     {
       "id": 63,
-      "name": "陈小方",
+      "name": "章颖芳",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641073983135287606"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641198593555384630"
     },
     {
       "id": 64,
-      "name": "胡帝伦",
+      "name": "张梓潞",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641073947451525412"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641189836128962843"
     },
     {
       "id": 65,
-      "name": "郭谨宁",
+      "name": "张攀",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641073956393666835"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641148216163748106"
     },
     {
       "id": 66,
-      "name": "姚汉峰",
+      "name": "李馨炜",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066403626174729"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641140423444662554"
     },
     {
       "id": 67,
-      "name": "金秋怡",
+      "name": "张晗",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066363181041971"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641135364753901851"
     },
     {
       "id": 68,
-      "name": "胡雅琴",
+      "name": "李秀莉",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066351206287662"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641133527300344100"
     },
     {
       "id": 69,
-      "name": "范怡婷",
+      "name": "徐泉",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066346080782638"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641117439585061161"
     },
     {
       "id": 70,
-      "name": "孙畅",
+      "name": "刘辰星",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066347695606042"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641073939674941738"
     },
     {
       "id": 71,
-      "name": "王子林",
+      "name": "邓新艺",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066351205894446"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641073965528631588"
     },
     {
       "id": 72,
-      "name": "沈赫然",
+      "name": "陈小方",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066378409543986"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641073983135287606"
     },
     {
       "id": 73,
-      "name": "吴鹂",
+      "name": "胡帝伦",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641066378409429298"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641073947451525412"
     },
     {
       "id": 74,
-      "name": "袁超",
+      "name": "郭谨宁",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-18",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7641027135315167498"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641073956393666835"
     },
     {
       "id": 75,
-      "name": "Charlie Lee",
+      "name": "姚汉峰",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640842866952636682"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641066403626174729"
     },
     {
       "id": 76,
-      "name": "刘兰杰",
+      "name": "金秋怡",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640842624232786227"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641066363181041971"
     },
     {
       "id": 77,
-      "name": "Urunov Rozmet",
+      "name": "胡雅琴",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640839550717479219"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641066351206287662"
     },
     {
       "id": 78,
-      "name": "郑琛谕",
+      "name": "范怡婷",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640839354679871770"
+      "status": "interview",
+      "stage": "专业二面",
+      "date": "2026-05-18",
+      "note": "当前阶段：专业二面",
+      "feishu_app_id": "7641066346080782638"
     },
     {
       "id": 79,
-      "name": "裴逸夫",
+      "name": "孙畅",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640833618492180799"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641066347695606042"
     },
     {
       "id": 80,
-      "name": "杨恒",
+      "name": "王子林",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640834002559158582"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641066351205894446"
     },
     {
       "id": 81,
-      "name": "林浩然",
+      "name": "沈赫然",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640832223012931903"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7641066378409543986"
     },
     {
       "id": 82,
-      "name": "陈诗",
+      "name": "吴鹂",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640832076653513023"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641066378409429298"
     },
     {
       "id": 83,
-      "name": "张赟",
+      "name": "袁超",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640829946714392838"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7641027135315167498"
     },
     {
       "id": 84,
-      "name": "张海锋",
+      "name": "Charlie Lee",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640830152477690154"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640842866952636682"
     },
     {
       "id": 85,
-      "name": "谢俊毅",
+      "name": "刘兰杰",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640826721353435401"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640842624232786227"
     },
     {
       "id": 86,
-      "name": "陈彪",
+      "name": "Urunov Rozmet",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640820977710745865"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640839550717479219"
     },
     {
       "id": 87,
-      "name": "曹娟",
+      "name": "郑琛谕",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640820113670965531"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640839354679871770"
     },
     {
       "id": 88,
-      "name": "宫先生",
+      "name": "裴逸夫",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640814172130167083"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640833618492180799"
     },
     {
       "id": 89,
-      "name": "尹刘洋",
+      "name": "杨恒",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640814353399073087"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640834002559158582"
     },
     {
       "id": 90,
-      "name": "张旭华",
+      "name": "林浩然",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640814313444247814"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640832223012931903"
     },
     {
       "id": 91,
-      "name": "吴雨壕",
+      "name": "陈诗",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640812461994854665"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640832076653513023"
     },
     {
       "id": 92,
-      "name": "李仁明",
+      "name": "张赟",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640812817859938611"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640829946714392838"
     },
     {
       "id": 93,
-      "name": "李祥远",
+      "name": "张海锋",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640812663215884553"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640830152477690154"
     },
     {
       "id": 94,
-      "name": "罗小姐",
+      "name": "谢俊毅",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640808414218750227"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640826721353435401"
     },
     {
       "id": 95,
-      "name": "余啸",
+      "name": "陈彪",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640767032648386857"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640820977710745865"
     },
     {
       "id": 96,
-      "name": "陈诗苓",
+      "name": "曹娟",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640765646301874478"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640820113670965531"
     },
     {
       "id": 97,
-      "name": "艾科",
+      "name": "宫先生",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640765460070730011"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640814172130167083"
     },
     {
       "id": 98,
-      "name": "姚钦",
+      "name": "尹刘洋",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640766059234347290"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640814353399073087"
     },
     {
       "id": 99,
-      "name": "潘海兰",
+      "name": "张旭华",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640766162187766067"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640814313444247814"
     },
     {
       "id": 100,
-      "name": "王璐瑶",
+      "name": "吴雨壕",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640766155858446602"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640812461994854665"
     },
     {
       "id": 101,
-      "name": "陈玺光",
+      "name": "李仁明",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640766023389612334"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640812817859938611"
     },
     {
       "id": 102,
-      "name": "郭梦真",
+      "name": "李祥远",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640766078621223218"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640812663215884553"
     },
     {
       "id": 103,
-      "name": "向前予",
+      "name": "罗小姐",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640765696897599770"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640808414218750227"
     },
     {
       "id": 104,
-      "name": "于斯一",
+      "name": "余啸",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640758571622107398"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640767032648386857"
     },
     {
       "id": 105,
-      "name": "应海悦",
+      "name": "陈诗苓",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640758653473638699"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640765646301874478"
     },
     {
       "id": 106,
-      "name": "贾茹玉",
+      "name": "艾科",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640758526819125540"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640765460070730011"
     },
     {
       "id": 107,
-      "name": "吴美群",
+      "name": "姚钦",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640756758411593994"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640766059234347290"
     },
     {
       "id": 108,
-      "name": "陈艺芊",
+      "name": "潘海兰",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640756756759628041"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640766162187766067"
     },
     {
       "id": 109,
-      "name": "钟建滨",
+      "name": "王璐瑶",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640724023437429034"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640766155858446602"
     },
     {
       "id": 110,
-      "name": "陈浩",
+      "name": "陈玺光",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640723456100157750"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640766023389612334"
     },
     {
       "id": 111,
-      "name": "杨勇",
+      "name": "郭梦真",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640691674478414126"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640766078621223218"
     },
     {
       "id": 112,
-      "name": "秦彬彬",
+      "name": "向前予",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640687924783434047"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640765696897599770"
     },
     {
       "id": 113,
-      "name": "封蔼然",
+      "name": "于斯一",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-17",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640688774972410155"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640758571622107398"
     },
     {
       "id": 114,
-      "name": "吴童",
+      "name": "应海悦",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640118459251329306"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640758653473638699"
     },
     {
       "id": 115,
-      "name": "黄雅慧",
+      "name": "贾茹玉",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640112647946193178"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640758526819125540"
     },
     {
       "id": 116,
-      "name": "张晔",
+      "name": "吴美群",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640113166239746355"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640756758411593994"
     },
     {
       "id": 117,
-      "name": "杨园盈",
+      "name": "陈艺芊",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640112647946029338"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640756756759628041"
     },
     {
       "id": 118,
-      "name": "胡雅琴",
+      "name": "钟建滨",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213314574602"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640724023437429034"
     },
     {
       "id": 119,
-      "name": "苗远笛",
+      "name": "陈浩",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640112647945849114"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640723456100157750"
     },
     {
       "id": 120,
-      "name": "彭高枫",
+      "name": "杨勇",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213314427146"
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640691674478414126"
     },
     {
       "id": 121,
-      "name": "陈颖妮",
+      "name": "秦彬彬",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640112647945685274"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640687924783434047"
     },
     {
       "id": 122,
-      "name": "郭谨宁",
+      "name": "封蔼然",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213314279690"
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-17",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640688774972410155"
     },
     {
       "id": 123,
-      "name": "赵安莹",
+      "name": "吴童",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640112647945537818"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640118459251329306"
     },
     {
       "id": 124,
-      "name": "小俣幸代",
+      "name": "黄雅慧",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "专业一面",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213314115850"
+      "note": "当前阶段：专业一面",
+      "feishu_app_id": "7640112647946193178"
     },
     {
       "id": 125,
-      "name": "常晓轩",
+      "name": "张晔",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640112647945390362"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640113166239746355"
     },
     {
       "id": 126,
-      "name": "陶佶",
+      "name": "杨园盈",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "专业一面",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213313968394"
+      "note": "当前阶段：专业一面",
+      "feishu_app_id": "7640112647946029338"
     },
     {
       "id": 127,
-      "name": "许晚君",
+      "name": "胡雅琴",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640109942528510258"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640111213314574602"
     },
     {
       "id": 128,
-      "name": "姚汉峰",
+      "name": "苗远笛",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "初面邀约",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213313804554"
+      "note": "当前阶段：初面邀约",
+      "feishu_app_id": "7640112647945849114"
     },
     {
       "id": 129,
-      "name": "包永乐",
+      "name": "彭高枫",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640109942528346418"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640111213314427146"
     },
     {
       "id": 130,
-      "name": "张晓磊",
+      "name": "陈颖妮",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213313657098"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640112647945685274"
     },
     {
       "id": 131,
-      "name": "龙静",
+      "name": "郭谨宁",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640109942528133426"
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640111213314279690"
     },
     {
       "id": 132,
-      "name": "张海锋",
+      "name": "赵安莹",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历评估",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640111213313509642"
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640112647945537818"
     },
     {
       "id": 133,
-      "name": "赵宇航",
+      "name": "小俣幸代",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "interview",
+      "stage": "专业一面",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
-      "feishu_app_id": "7640109942527953202"
+      "note": "当前阶段：专业一面",
+      "feishu_app_id": "7640111213314115850"
     },
     {
       "id": 134,
+      "name": "常晓轩",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640112647945390362"
+    },
+    {
+      "id": 135,
+      "name": "陶佶",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640111213313968394"
+    },
+    {
+      "id": 136,
+      "name": "许晚君",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640109942528510258"
+    },
+    {
+      "id": 137,
+      "name": "姚汉峰",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640111213313804554"
+    },
+    {
+      "id": 138,
+      "name": "包永乐",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640109942528346418"
+    },
+    {
+      "id": 139,
+      "name": "张晓磊",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640111213313657098"
+    },
+    {
+      "id": 140,
+      "name": "龙静",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640109942528133426"
+    },
+    {
+      "id": 141,
+      "name": "张海锋",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历评估",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历评估",
+      "feishu_app_id": "7640111213313509642"
+    },
+    {
+      "id": 142,
+      "name": "赵宇航",
+      "source": "飞书招聘",
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-15",
+      "note": "当前阶段：简历初筛",
+      "feishu_app_id": "7640109942527953202"
+    },
+    {
+      "id": 143,
       "name": "张旭华",
       "source": "飞书招聘",
-      "status": "wishlist",
+      "status": "applied",
+      "stage": "简历初筛",
       "date": "2026-05-15",
-      "note": "当前阶段：投递",
+      "note": "当前阶段：简历初筛",
       "feishu_app_id": "7640111213313362186"
     }
   ],
