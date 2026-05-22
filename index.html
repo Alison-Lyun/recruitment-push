@@ -1,42 +1,437 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.5">
-  <style type="text/css">
-    body {background-color: #eae9e4}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #878787; -webkit-text-stroke: #878787; min-height: 16.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'PingFang SC'; color: #878787; -webkit-text-stroke: #878787}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 12.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858; min-height: 15.0px}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'PingFang SC'; color: #585858; -webkit-text-stroke: #585858}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414; min-height: 16.0px}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'PingFang SC'; color: #141414; -webkit-text-stroke: #141414}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 13.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858; min-height: 16.0px}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'PingFang SC'; color: #585858; -webkit-text-stroke: #585858}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #141414; -webkit-text-stroke: #141414; min-height: 15.0px}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #141414; min-height: 16.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 20.0px '.SF NS'; font-kerning: none}
-    span.s3 {font: 20.0px 'PingFang SC'; font-kerning: none}
-    span.s4 {font: 12.0px 'Helvetica Neue'; font-kerning: none}
-    span.s5 {font-kerning: none; background-color: #ffffff}
-    span.s6 {font-kerning: none; background-color: #f2f3f0}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用户服务运营负责人 · 招聘追踪</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f2;
+      --panel: #ffffff;
+      --panel-soft: #eef2ea;
+      --text: #16181d;
+      --muted: #667085;
+      --line: #d9dfd2;
+      --green: #1f8f5f;
+      --blue: #2764d8;
+      --amber: #b7791f;
+      --red: #c24135;
+      --shadow: 0 10px 30px rgba(23, 35, 26, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Microsoft YaHei", sans-serif;
+      letter-spacing: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(246, 247, 242, .94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.25;
+      font-weight: 750;
+    }
+
+    .sub {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    button {
+      height: 36px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 0 12px;
+      cursor: pointer;
+    }
+
+    button.primary {
+      border-color: var(--green);
+      background: var(--green);
+      color: #fff;
+      font-weight: 650;
+    }
+
+    main {
+      padding: 22px 0 40px;
+    }
+
+    .notice {
+      display: none;
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      border: 1px solid #efd9a3;
+      background: #fff8e6;
+      color: #725115;
+      border-radius: 8px;
+      line-height: 1.5;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .stat {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      min-height: 84px;
+    }
+
+    .stat .label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .stat .value {
+      margin-top: 8px;
+      font-size: 28px;
+      font-weight: 780;
+      line-height: 1;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr 180px 180px;
+      gap: 10px;
+      margin: 18px 0 12px;
+    }
+
+    input, select {
+      width: 100%;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 11px;
+      background: var(--panel);
+      color: var(--text);
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(39, 100, 216, .12);
+    }
+
+    .board {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      position: sticky;
+      top: 75px;
+      background: var(--panel-soft);
+      color: #3d4654;
+      font-size: 13px;
+      font-weight: 700;
+      z-index: 2;
+    }
+
+    tbody tr:hover {
+      background: #fafbf7;
+    }
+
+    .name {
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      background: #edf2ff;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .pill.wishlist { background: #eaf6ef; color: var(--green); }
+    .pill.applied { background: #edf2ff; color: var(--blue); }
+    .pill.interview { background: #fff4d6; color: var(--amber); }
+    .pill.offer { background: #ffe9e6; color: var(--red); }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .empty {
+      padding: 34px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 820px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .actions { justify-content: flex-start; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolbar { grid-template-columns: 1fr; }
+      th { top: 132px; }
+      .board { overflow-x: auto; }
+      table { min-width: 760px; }
+    }
   </style>
 </head>
 <body>
-<h1 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px '.PingFang UI SC'; color: #141414; -webkit-text-stroke: #141414"><span class="s1">用户运营负责人</span><span class="s2"><i> · </i></span><span class="s3">招聘追踪</span></h1>
-<p class="p2"><span class="s1"><i></i></span><br></p>
-<p class="p3"><span class="s1">正在加载飞书数据</span><span class="s4"><i>...</i></span></p>
-<p class="p4"><span class="s1"><i></i></span><br></p>
-<p class="p5"><span class="s1">刷新数据</span></p>
-<p class="p6"><span class="s1"><i></i></span><br></p>
-<p class="p7"><span class="s5">候选人看板</span></p>
-<p class="p8"><span class="s1"><i></i></span><br></p>
-<p class="p9"><span class="s6">面试反馈</span></p>
-<p class="p10"><span class="s1"><i></i></span><br></p>
-<p class="p11"><span class="s1"><i></i></span><br></p>
+  <header>
+    <div class="wrap topbar">
+      <div>
+        <h1>用户服务运营负责人 · 招聘追踪</h1>
+        <div class="sub" id="meta">正在加载飞书数据...</div>
+      </div>
+      <div class="actions">
+        <button id="refreshBtn" type="button">刷新数据</button>
+        <button class="primary" id="openDataBtn" type="button">查看数据文件</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="notice" id="notice"></div>
+
+    <section class="stats" aria-label="招聘统计">
+      <div class="stat">
+        <div class="label">候选人总数</div>
+        <div class="value" id="totalCount">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">待筛选</div>
+        <div class="value" id="wishlistCount">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">面试中</div>
+        <div class="value" id="interviewCount">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">最近更新</div>
+        <div class="value" id="latestDate">--</div>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="筛选">
+      <input id="searchInput" type="search" placeholder="搜索姓名、来源、阶段">
+      <select id="statusSelect">
+        <option value="">全部状态</option>
+        <option value="wishlist">待筛选</option>
+        <option value="applied">已投递/评估</option>
+        <option value="interview">面试中</option>
+        <option value="offer">Offer</option>
+      </select>
+      <select id="sourceSelect">
+        <option value="">全部来源</option>
+      </select>
+    </section>
+
+    <section class="board" aria-label="候选人看板">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 72px;">序号</th>
+            <th>姓名</th>
+            <th>来源</th>
+            <th>状态</th>
+            <th>日期</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody id="candidateRows"></tbody>
+      </table>
+      <div class="empty" id="emptyState" hidden>没有符合条件的候选人</div>
+    </section>
+  </main>
+
+  <script>
+    const state = {
+      data: { candidates: [], job: "用户服务运营负责人" },
+      query: "",
+      status: "",
+      source: ""
+    };
+
+    const labels = {
+      wishlist: "待筛选",
+      applied: "已投递",
+      interview: "面试中",
+      offer: "Offer"
+    };
+
+    const $ = (id) => document.getElementById(id);
+
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function showNotice(message) {
+      const el = $("notice");
+      el.textContent = message;
+      el.style.display = message ? "block" : "none";
+    }
+
+    async function loadData() {
+      $("meta").textContent = "正在加载飞书数据...";
+      showNotice("");
+      const dataUrl = `data.json?v=${Date.now()}`;
+
+      try {
+        const res = await fetch(dataUrl, { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        state.data = {
+          job: json.job || "用户服务运营负责人",
+          candidates: Array.isArray(json.candidates) ? json.candidates : []
+        };
+        $("meta").textContent = `${state.data.job} · 已加载 ${state.data.candidates.length} 位候选人`;
+        buildSourceOptions();
+        render();
+      } catch (error) {
+        $("meta").textContent = "数据加载失败";
+        showNotice(`无法读取 data.json：${error.message}。请稍后刷新，或检查 GitHub Actions 是否同步成功。`);
+      }
+    }
+
+    function buildSourceOptions() {
+      const select = $("sourceSelect");
+      const current = select.value;
+      const sources = [...new Set(state.data.candidates.map((c) => c.source || "飞书招聘"))].sort();
+      select.innerHTML = '<option value="">全部来源</option>' +
+        sources.map((source) => `<option value="${escapeHtml(source)}">${escapeHtml(source)}</option>`).join("");
+      select.value = sources.includes(current) ? current : "";
+      state.source = select.value;
+    }
+
+    function filteredCandidates() {
+      const query = state.query.trim().toLowerCase();
+      return state.data.candidates.filter((candidate) => {
+        const text = [
+          candidate.name,
+          candidate.source,
+          labels[candidate.status] || candidate.status,
+          candidate.note,
+          candidate.date
+        ].join(" ").toLowerCase();
+        return (!query || text.includes(query)) &&
+          (!state.status || candidate.status === state.status) &&
+          (!state.source || (candidate.source || "飞书招聘") === state.source);
+      });
+    }
+
+    function renderStats(candidates) {
+      $("totalCount").textContent = state.data.candidates.length;
+      $("wishlistCount").textContent = state.data.candidates.filter((c) => c.status === "wishlist").length;
+      $("interviewCount").textContent = state.data.candidates.filter((c) => c.status === "interview").length;
+      $("latestDate").textContent = state.data.candidates.map((c) => c.date).filter(Boolean).sort().at(-1) || "--";
+      $("emptyState").hidden = candidates.length !== 0;
+    }
+
+    function render() {
+      const candidates = filteredCandidates();
+      renderStats(candidates);
+
+      $("candidateRows").innerHTML = candidates.map((candidate) => {
+        const status = candidate.status || "wishlist";
+        return `
+          <tr>
+            <td class="muted">${escapeHtml(candidate.id)}</td>
+            <td class="name">${escapeHtml(candidate.name || "未命名")}</td>
+            <td>${escapeHtml(candidate.source || "飞书招聘")}</td>
+            <td><span class="pill ${escapeHtml(status)}">${escapeHtml(labels[status] || status)}</span></td>
+            <td>${escapeHtml(candidate.date || "--")}</td>
+            <td class="muted">${escapeHtml(candidate.note || "")}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    $("refreshBtn").addEventListener("click", loadData);
+    $("openDataBtn").addEventListener("click", () => window.open(`data.json?v=${Date.now()}`, "_blank"));
+    $("searchInput").addEventListener("input", (event) => {
+      state.query = event.target.value;
+      render();
+    });
+    $("statusSelect").addEventListener("change", (event) => {
+      state.status = event.target.value;
+      render();
+    });
+    $("sourceSelect").addEventListener("change", (event) => {
+      state.source = event.target.value;
+      render();
+    });
+
+    loadData();
+  </script>
 </body>
 </html>
