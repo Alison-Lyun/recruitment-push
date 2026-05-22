@@ -2,7 +2,7 @@ name: 同步飞书招聘数据
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # 每6小时自动同步一次
+    - cron: '*/30 * * * *'   # 每30分钟自动同步一次
   workflow_dispatch:          # 允许手动触发
 
 jobs:
