@@ -139,6 +139,34 @@
       line-height: 1;
     }
 
+    .pipeline {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0 0 16px;
+    }
+
+    .stage-card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 72px;
+      box-shadow: var(--shadow);
+    }
+
+    .stage-card .label {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .stage-card .value {
+      margin-top: 6px;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 780;
+    }
+
     .toolbar {
       display: grid;
       grid-template-columns: 1fr 180px 180px;
@@ -234,6 +262,7 @@
       .topbar { align-items: flex-start; flex-direction: column; }
       .actions { justify-content: flex-start; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .pipeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .toolbar { grid-template-columns: 1fr; }
       th { top: 132px; }
       .board { overflow-x: auto; }
@@ -264,11 +293,11 @@
         <div class="value" id="totalCount">0</div>
       </div>
       <div class="stat">
-        <div class="label">待筛选</div>
+        <div class="label">进行中</div>
         <div class="value" id="wishlistCount">0</div>
       </div>
       <div class="stat">
-        <div class="label">面试中</div>
+        <div class="label">面试相关</div>
         <div class="value" id="interviewCount">0</div>
       </div>
       <div class="stat">
@@ -277,14 +306,29 @@
       </div>
     </section>
 
+    <section class="pipeline" aria-label="飞书流程阶段">
+      <div class="stage-card">
+        <div class="label">简历初筛</div>
+        <div class="value" id="stageResumeScreen">0</div>
+      </div>
+      <div class="stage-card">
+        <div class="label">简历评估</div>
+        <div class="value" id="stageResumeReview">0</div>
+      </div>
+      <div class="stage-card">
+        <div class="label">初面邀约</div>
+        <div class="value" id="stageFirstInvite">0</div>
+      </div>
+      <div class="stage-card">
+        <div class="label">专业一面</div>
+        <div class="value" id="stageProfessionalFirst">0</div>
+      </div>
+    </section>
+
     <section class="toolbar" aria-label="筛选">
       <input id="searchInput" type="search" placeholder="搜索姓名、来源、阶段">
       <select id="statusSelect">
-        <option value="">全部状态</option>
-        <option value="wishlist">待筛选</option>
-        <option value="applied">已投递/评估</option>
-        <option value="interview">面试中</option>
-        <option value="offer">Offer</option>
+        <option value="">全部阶段</option>
       </select>
       <select id="sourceSelect">
         <option value="">全部来源</option>
@@ -298,7 +342,7 @@
             <th style="width: 72px;">序号</th>
             <th>姓名</th>
             <th>来源</th>
-            <th>状态</th>
+            <th>飞书阶段</th>
             <th>日期</th>
             <th>备注</th>
           </tr>
@@ -313,7 +357,7 @@
     const state = {
       data: { candidates: [], job: "用户服务运营负责人" },
       query: "",
-      status: "",
+      stage: "",
       source: ""
     };
 
@@ -355,7 +399,7 @@
           candidates: Array.isArray(json.candidates) ? json.candidates : []
         };
         $("meta").textContent = `${state.data.job} · 已加载 ${state.data.candidates.length} 位候选人`;
-        buildSourceOptions();
+        buildFilterOptions();
         render();
       } catch (error) {
         $("meta").textContent = "数据加载失败";
@@ -363,37 +407,58 @@
       }
     }
 
-    function buildSourceOptions() {
-      const select = $("sourceSelect");
-      const current = select.value;
+    function buildFilterOptions() {
+      const sourceSelect = $("sourceSelect");
+      const stageSelect = $("statusSelect");
+      const currentSource = sourceSelect.value;
+      const currentStage = stageSelect.value;
       const sources = [...new Set(state.data.candidates.map((c) => c.source || "飞书招聘"))].sort();
-      select.innerHTML = '<option value="">全部来源</option>' +
+      const stages = [...new Set(state.data.candidates.map((c) => stageName(c)).filter(Boolean))].sort();
+
+      sourceSelect.innerHTML = '<option value="">全部来源</option>' +
         sources.map((source) => `<option value="${escapeHtml(source)}">${escapeHtml(source)}</option>`).join("");
-      select.value = sources.includes(current) ? current : "";
-      state.source = select.value;
+      sourceSelect.value = sources.includes(currentSource) ? currentSource : "";
+      state.source = sourceSelect.value;
+
+      stageSelect.innerHTML = '<option value="">全部阶段</option>' +
+        stages.map((stage) => `<option value="${escapeHtml(stage)}">${escapeHtml(stage)}</option>`).join("");
+      stageSelect.value = stages.includes(currentStage) ? currentStage : "";
+      state.stage = stageSelect.value;
+    }
+
+    function stageName(candidate) {
+      return candidate.stage || String(candidate.note || "").replace(/^当前阶段：/, "") || labels[candidate.status] || candidate.status || "投递";
     }
 
     function filteredCandidates() {
       const query = state.query.trim().toLowerCase();
       return state.data.candidates.filter((candidate) => {
+        const stage = stageName(candidate);
         const text = [
           candidate.name,
           candidate.source,
+          stage,
           labels[candidate.status] || candidate.status,
           candidate.note,
           candidate.date
         ].join(" ").toLowerCase();
         return (!query || text.includes(query)) &&
-          (!state.status || candidate.status === state.status) &&
+          (!state.stage || stage === state.stage) &&
           (!state.source || (candidate.source || "飞书招聘") === state.source);
       });
     }
 
     function renderStats(candidates) {
+      const all = state.data.candidates;
+      const countStage = (needle) => all.filter((c) => stageName(c).includes(needle)).length;
       $("totalCount").textContent = state.data.candidates.length;
-      $("wishlistCount").textContent = state.data.candidates.filter((c) => c.status === "wishlist").length;
+      $("wishlistCount").textContent = state.data.candidates.filter((c) => c.status !== "offer").length;
       $("interviewCount").textContent = state.data.candidates.filter((c) => c.status === "interview").length;
       $("latestDate").textContent = state.data.candidates.map((c) => c.date).filter(Boolean).sort().at(-1) || "--";
+      $("stageResumeScreen").textContent = countStage("简历初筛");
+      $("stageResumeReview").textContent = countStage("简历评估");
+      $("stageFirstInvite").textContent = countStage("初面邀约");
+      $("stageProfessionalFirst").textContent = countStage("专业一面");
       $("emptyState").hidden = candidates.length !== 0;
     }
 
@@ -403,12 +468,13 @@
 
       $("candidateRows").innerHTML = candidates.map((candidate) => {
         const status = candidate.status || "wishlist";
+        const stage = stageName(candidate);
         return `
           <tr>
             <td class="muted">${escapeHtml(candidate.id)}</td>
             <td class="name">${escapeHtml(candidate.name || "未命名")}</td>
             <td>${escapeHtml(candidate.source || "飞书招聘")}</td>
-            <td><span class="pill ${escapeHtml(status)}">${escapeHtml(labels[status] || status)}</span></td>
+            <td><span class="pill ${escapeHtml(status)}">${escapeHtml(stage)}</span></td>
             <td>${escapeHtml(candidate.date || "--")}</td>
             <td class="muted">${escapeHtml(candidate.note || "")}</td>
           </tr>
@@ -423,7 +489,7 @@
       render();
     });
     $("statusSelect").addEventListener("change", (event) => {
-      state.status = event.target.value;
+      state.stage = event.target.value;
       render();
     });
     $("sourceSelect").addEventListener("change", (event) => {
