@@ -24,10 +24,10 @@
       "id": 3,
       "name": "吴佳栩",
       "source": "飞书招聘",
-      "status": "applied",
-      "stage": "简历评估",
+      "status": "interview",
+      "stage": "初面邀约",
       "date": "2026-05-28",
-      "note": "当前阶段：简历评估",
+      "note": "当前阶段：初面邀约",
       "feishu_app_id": "7644877768853604658"
     },
     {
