@@ -1282,12 +1282,12 @@
     },
     {
       "id": 129,
-      "name": "陈小方",
+      "name": "候选人129",
       "source": "飞书招聘",
-      "status": "applied",
-      "stage": "简历初筛",
-      "date": "2026-05-18",
-      "note": "当前阶段：简历初筛",
+      "status": "wishlist",
+      "stage": "投递",
+      "date": "",
+      "note": "当前阶段：投递",
       "feishu_app_id": "7641073983135287606"
     },
     {
