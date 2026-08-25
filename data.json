@@ -22,12 +22,12 @@
     },
     {
       "id": 3,
-      "name": "周琳",
+      "name": "候选人3",
       "source": "飞书招聘",
-      "status": "applied",
-      "stage": "简历初筛",
-      "date": "2026-06-05",
-      "note": "当前阶段：简历初筛",
+      "status": "wishlist",
+      "stage": "投递",
+      "date": "",
+      "note": "当前阶段：投递",
       "feishu_app_id": "7647747988614039817"
     },
     {
