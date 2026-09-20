@@ -1102,12 +1102,12 @@
     },
     {
       "id": 111,
-      "name": "候选人111",
+      "name": "许强",
       "source": "飞书招聘",
-      "status": "wishlist",
-      "stage": "投递",
-      "date": "",
-      "note": "当前阶段：投递",
+      "status": "applied",
+      "stage": "简历初筛",
+      "date": "2026-05-18",
+      "note": "当前阶段：简历初筛",
       "feishu_app_id": "7641223931764705574"
     },
     {
